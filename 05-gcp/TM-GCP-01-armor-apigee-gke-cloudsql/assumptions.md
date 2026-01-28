@@ -1,0 +1,4 @@
+- Workload Identity is enforced; service account keys are disabled
+- Primitive IAM roles are not used
+- VPC Service Controls protect sensitive data projects
+- Public Access Prevention is enabled for GCS
