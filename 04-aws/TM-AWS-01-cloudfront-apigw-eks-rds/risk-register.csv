@@ -1,0 +1,5 @@
+AWS01-001,IRSA,S,Service account misbinding allows unauthorized IAM role assumption,High,Medium,High,Per-service IAM roles + strict OIDC trust,Platform,Open,
+AWS01-002,IAM,E,Wildcard IAM policies grant excessive privileges,High,Medium,High,Least-privilege IAM + policy boundaries,Security,Open,
+AWS01-003,IMDS,S,SSRF exploits metadata service to steal credentials,High,Medium,High,IMDSv2 + block link-local egress,Platform,Open,
+AWS01-004,S3,I,Public bucket or ACL misconfiguration leaks data,High,Medium,High,Block Public Access + no ACLs,Platform,Open,
+AWS01-005,CloudWatch,I,Secrets or PII logged unintentionally,High,Medium,High,Log redaction + review logging config,App,Open,
