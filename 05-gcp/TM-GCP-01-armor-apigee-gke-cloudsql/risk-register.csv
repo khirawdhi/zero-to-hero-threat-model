@@ -1,0 +1,5 @@
+GCP01-001,Workload Identity,S,Service account impersonation via misbinding,High,Medium,High,Strict one-to-one workload identity mapping,Platform,Open,
+GCP01-002,IAM,E,Use of primitive roles (Owner/Editor),High,Medium,High,Replace with predefined/custom roles,Security,Open,
+GCP01-003,Data Plane,I,Missing VPC Service Controls enables data exfiltration,High,Medium,High,Enforce VPC Service Controls,Platform,Open,
+GCP01-004,GCS,I,Public bucket exposure via IAM/ACLs,High,Medium,High,Public Access Prevention + disable ACLs,Platform,Open,
+GCP01-005,Observability,I,Sensitive data logged in Cloud Logging,High,Medium,High,Log redaction and review,App,Open,
