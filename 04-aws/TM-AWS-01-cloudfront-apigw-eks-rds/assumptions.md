@@ -1,0 +1,3 @@
+- IMDSv2 is enforced on all EKS nodes
+- S3 Block Public Access is enabled account-wide
+- IAM policies follow least-privilege principles
