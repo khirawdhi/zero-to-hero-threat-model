@@ -1,0 +1,13 @@
+Risk ID,Component,Threat Type (STRIDE),Threat Description,Impact,Likelihood,Risk Level,Recommended Mitigation,Owner,Status,Target Date
+AZ01-001,APIM,S,Stolen/forged JWT replay leads to unauthorized API access,High,Medium,High,Strict OIDC validation (iss/aud/exp) + short TTL + refresh rotation,Security,Open,
+AZ01-002,APIM,E,AuthZ bypass due to misconfigured APIM policies or open routes,High,Medium,High,Deny-by-default routes + per-operation authZ + config checks,Platform,Open,
+AZ01-003,Edge,D,L7 DoS floods expensive endpoints and exhausts AKS,High,Medium,High,Rate limits/quotas + WAF bot protection + HPA + timeouts,Platform,Open,
+AZ01-004,AKS,E,Service trusts gateway only; missing in-service authZ checks,High,Medium,High,Defense-in-depth authZ in services (scope/role validation),App,Open,
+AZ01-005,AKS→Entra,S,Workload identity misbinding allows wrong workload access,High,Low,Medium,Per-service identities + least privilege + review bindings,Platform,Open,
+AZ01-006,AKS→Data,I,Over-permissive IAM or network exposes SQL/Blob leading to exfiltration,High,Medium,High,Private endpoints + deny public access + scoped RBAC + egress controls,Platform,Open,
+AZ01-007,AKS→Data,E,SQLi or SSRF chain leads to data access escalation,High,Medium,High,Parameterized queries + SSRF defenses + block link-local egress,WAF/App,Open,
+AZ01-008,Key Vault,S,Shared identity permits unauthorized secret reads,High,Medium,High,Per-service identity + least privilege vault policies,Platform,Open,
+AZ01-009,Key Vault,T,Secret tampering/rotation by privileged actor compromises runtime,High,Low,Medium,Approval workflow + alerts on secret changes,Security,Open,
+AZ01-010,Observability,I,PII/tokens leaked via logs/traces,High,Medium,High,Log redaction + never log tokens + DLP checks,App,Open,
+AZ01-011,CI/CD,T,Supply chain tampering introduces backdoored image,High,Medium,High,SBOM + image signing + provenance + CI policy gates,Security,Open,
+AZ01-012,CI/CD,E,Deployer has cluster-admin leading to cluster takeover,High,Medium,High,Least-privilege RBAC for deployer + namespace separation,Platform,Open,
