@@ -48,4 +48,4 @@ This repository is educational and designed for practical reuse, but every syste
 Validate controls with your engineering, platform, and compliance requirements.
 
 ## License
-MIT (recommended for maximum reuse).
+This project is licensed under the MIT License.
