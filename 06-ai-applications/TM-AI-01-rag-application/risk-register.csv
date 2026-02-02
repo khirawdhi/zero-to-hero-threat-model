@@ -1,0 +1,13 @@
+RiskID,Component,STRIDE,Threat Scenario,Impact,Likelihood,Severity,Recommended Mitigation,Owner,Status,Notes
+AI01-001,Prompting,I,Prompt injection causes model to reveal system prompts or hidden context,High,High,Critical,Prompt hardening + never include secrets in prompts + output filtering,App,Open,
+AI01-002,Retrieval,I,Unauthorized retrieval returns restricted documents (ACL bypass),High,Medium,High,Enforce authZ at retrieval time + per-user filters + post-retrieval checks,App,Open,
+AI01-003,Knowledge Base,T,Knowledge base poisoning introduces malicious instructions into retrieved context,High,Medium,High,Ingestion validation + source trust + moderation + approvals,Platform,Open,
+AI01-004,Vector DB,T,Vector index/metadata tampering biases retrieval or leaks data,High,Medium,High,Strict RBAC + audit logs + versioning + integrity monitoring,Platform,Open,
+AI01-005,Logging,I,Sensitive prompts/outputs logged (PII/secrets),High,Medium,High,Redaction + scrub tokens/secrets + retention limits + access controls,Platform,Open,
+AI01-006,LLM Usage,D,Token/compute exhaustion via long prompts or adversarial inputs,Medium,High,High,Input limits + truncation + quotas + timeouts + caching,App,Open,
+AI01-007,Multi-Tenant,I,Cross-tenant leakage through shared vector indexes or storage,High,Medium,High,Tenant isolation (separate indexes/keys) + strict partitioning,Platform,Open,
+AI01-008,CI/CD,E,Build pipeline compromise modifies system prompt/guardrails,High,Medium,High,Signed builds + protected branches + least-priv CI/CD + secret isolation,Platform,Open,
+AI01-009,Identity,S,Spoofed session/user queries retrieval as another user,High,Medium,High,Strong auth + session binding + token validation + rate limits,App,Open,
+AI01-010,Tooling,E,Model output triggers privileged actions beyond user authorization (tool abuse),High,Low,Medium,Server-side policy enforcement for tools + allowlists + HITL for high risk,App,Open,If tools not enabled mark N/A
+AI01-011,Availability,D,LLM provider outage or rate limits degrade system,Medium,Medium,Medium,Graceful degradation + fallback modes + retries/backoff,Platform,Open,
+AI01-012,Repudiation,R,Insufficient auditability (no record of retrieved docs/prompt hashes),Medium,Medium,Medium,Log prompt hash + retrieval IDs + doc versions + request IDs,Platform,Open,
