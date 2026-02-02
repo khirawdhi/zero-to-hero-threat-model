@@ -1,0 +1,13 @@
+RiskID,Component,STRIDE,Threat Scenario,Impact,Likelihood,Severity,Recommended Mitigation,Owner,Status,Notes
+AI02-001,Model→Action Boundary,E,Confused deputy: untrusted user prompt leads agent to execute privileged tool actions,High,Medium,High,Policy engine enforces user permissions + intent binding + deny-by-default,App,Open,
+AI02-002,Policy Engine,E,Approval bypass: high-risk actions executed without step-up approval/HITL,High,Medium,High,Action risk classification + mandatory approval gates + audit trail,App,Open,
+AI02-003,Tool Executor,T,Parameter injection into tools (SQL/command/SSRF) via LLM-crafted inputs,High,High,Critical,Strict schema validation + allowlisted params + safe SDKs + output encoding,App,Open,
+AI02-004,Tooling Layer,S,Tool endpoint spoofing (DNS/URL manipulation) routes calls to attacker infra,High,Medium,High,Hard allowlist base URLs + egress controls + DNS protections,Platform,Open,
+AI02-005,Tool Privileges,E,Executor/service identity has broader privileges than user (privilege mismatch),High,Medium,High,Per-user scoped tokens + least-priv tool identities + token exchange,Platform,Open,
+AI02-006,Agent Runtime,D,Agent loops cause tool-call amplification and cost spikes,Medium,High,High,Max tool calls per request + time budgets + circuit breakers + caching,App,Open,
+AI02-007,Memory/State,T,Memory poisoning biases future actions or bypasses safety constraints,High,Medium,High,Sanitize memory writes + bounded retention + integrity/audit + separate “trusted state”,App,Open,
+AI02-008,LLM Interaction,I,Sensitive tool results leaked in response or logs,High,Medium,High,Output filtering + data classification + redaction + least-priv tools,App,Open,
+AI02-009,Secrets,I,Secrets exposed to LLM via prompt/context or tool results,High,Medium,High,Never pass secrets to LLM + secret scanning + token exchange patterns,Platform,Open,
+AI02-010,Identity,S,Session/token spoofing triggers actions as another user,High,Medium,High,Strong auth + session binding + step-up auth for sensitive actions,App,Open,
+AI02-011,Auditability,R,Insufficient evidence trail for who approved/executed actions and why,Medium,Medium,Medium,Immutable audit logs + action IDs + policy decisions + timestamps,Platform,Open,
+AI02-012,Build→Runtime,E,CI/CD compromise modifies policies/allowlists/prompts to enable dangerous actions,High,Medium,High,Signed builds + protected branches + separation of duties + secret isolation,Platform,Open,
