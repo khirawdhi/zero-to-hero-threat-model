@@ -1,0 +1,7 @@
+RiskID,Component,STRIDE,Threat Scenario,Impact,Likelihood,Severity,Mitigation,Owner,Status
+A2A-001,Client Secrets,S,Stolen client credentials mint valid tokens,High,Medium,High,Secret rotation + vault + least privilege,Platform,Open
+A2A-002,Access Token,I,Token leakage via logs or monitoring,High,Medium,High,Redaction + short TTL,App,Open
+A2A-003,Service Identity,E,Over-scoped client credentials grant excess access,High,High,Critical,Scope minimization + policy enforcement,App,Open
+A2A-004,Webhook,S,Forged webhook event triggers action,High,Medium,High,Signature validation + timestamp check,App,Open
+A2A-005,Replay,D,Replay of valid token within TTL window,Medium,Medium,Medium,Short TTL + optional token binding,Platform,Open
+A2A-006,Partner Trust,E,Confused deputy across tenants,High,Medium,High,Intent validation + tenant scoping,App,Open
