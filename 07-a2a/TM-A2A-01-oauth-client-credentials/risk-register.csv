@@ -1,7 +1,9 @@
-RiskID,Component,STRIDE,Threat Scenario,Impact,Likelihood,Severity,Mitigation,Owner,Status
-A2A-001,Client Secrets,S,Stolen client credentials mint valid tokens,High,Medium,High,Secret rotation + vault + least privilege,Platform,Open
-A2A-002,Access Token,I,Token leakage via logs or monitoring,High,Medium,High,Redaction + short TTL,App,Open
-A2A-003,Service Identity,E,Over-scoped client credentials grant excess access,High,High,Critical,Scope minimization + policy enforcement,App,Open
-A2A-004,Webhook,S,Forged webhook event triggers action,High,Medium,High,Signature validation + timestamp check,App,Open
-A2A-005,Replay,D,Replay of valid token within TTL window,Medium,Medium,Medium,Short TTL + optional token binding,Platform,Open
-A2A-006,Partner Trust,E,Confused deputy across tenants,High,Medium,High,Intent validation + tenant scoping,App,Open
+RiskID,Component,STRIDE,Threat Scenario,Impact,Likelihood,Severity,Recommended Mitigation,Owner,Status
+A2A-001,Client Secret,S,Stolen client secret used to mint tokens,High,Medium,High,Secret rotation + vault storage + monitoring,Platform,Open
+A2A-002,Access Token,S,Token replay within validity window,High,Medium,High,Short TTL + token binding + audience checks,App,Open
+A2A-003,Scopes,E,Over-privileged scopes enable data exfiltration,High,High,Critical,Scope minimization + periodic review,Platform,Open
+A2A-004,Webhook,S,Spoofed webhook events trigger actions,High,Medium,High,HMAC verification + timestamp + nonce,App,Open
+A2A-005,Authorization Logic,E,Confused deputy between services,High,Medium,High,Server-side action authorization checks,App,Open
+A2A-006,Logging,I,Token exposure in logs,Medium,High,High,Log redaction + secure log storage,Platform,Open
+A2A-007,Token Endpoint,D,Token endpoint flooding,Medium,Medium,Medium,Rate limiting + anomaly detection,Platform,Open
+A2A-008,CI/CD,E,Scope expansion via config drift,High,Medium,High,Protected branches + signed builds,Platform,Open
