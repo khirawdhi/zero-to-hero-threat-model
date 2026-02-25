@@ -1,0 +1,11 @@
+Risk ID,Title,Category (STRIDE),Affected Flow/Boundary,Impact,Likelihood,Risk Rating,Description,Primary Control,Owner,Status
+MTLS-01,Private key compromise,Spoofing / Elevation of Privilege,TB1 Workload Identity Boundary,High,Medium,High,Compromise of sidecar private key enables identity spoofing and lateral movement within mesh,Short-lived certificates + secure secret storage,Platform Security,Open
+MTLS-02,CA compromise or mis-issuance,Elevation of Privilege,TB3 Certificate Issuance Boundary,Critical,Low,High,Compromised or misconfigured CA can issue valid identities for any service,Hardened CA + strict CSR validation + audit logs,Platform Security,Open
+MTLS-03,Over-permissive mesh policy,Elevation of Privilege,TB2 Mesh Policy Boundary,High,Medium,High,Authorization policies allow unintended service-to-service access,Least-privilege mesh policies + policy review process,Security Architecture,Open
+MTLS-04,CI/CD config tampering,Tampering / Elevation of Privilege,TB5 Build→Runtime Boundary,High,Medium,High,Malicious policy or trust anchor promoted via pipeline,Signed artifacts + protected branches + approval gates,DevSecOps,Open
+MTLS-05,Handshake flood DoS,Denial of Service,F2 mTLS Handshake,Medium,Medium,Medium,Repeated TLS handshakes exhaust proxy CPU and impact availability,Connection rate limits + circuit breakers,SRE,Open
+MTLS-06,Certificate renewal storm,Denial of Service,F8 CSR / Renewal,Medium,Medium,Medium,Simultaneous certificate renewal overwhelms CA,Staggered renewals + rate limiting,SRE,Open
+MTLS-07,Sensitive data leakage in logs,Information Disclosure,F10 Telemetry,High,Medium,High,Headers or payload data logged by proxy expose secrets,Log redaction + logging policy,SRE,Open
+MTLS-08,Policy change without audit trail,Repudiation,TB2 Mesh Policy Boundary,Medium,Medium,Medium,No audit record of who changed authorization policy,Immutable audit logging + RBAC,Platform Security,Open
+MTLS-09,Trust bundle tampering,Tampering,TB1 / TB3,High,Low,Medium,Sidecars accept malicious CA due to altered trust bundle,Signed trust bundles + integrity checks,Platform Security,Open
+MTLS-10,Node compromise exposing certs,Information Disclosure / Elevation of Privilege,TB4 Runtime Boundary,High,Medium,High,Compromised node exposes sidecar secrets and decrypted traffic,Runtime hardening + pod isolation,Platform Engineering,Open
