@@ -52,6 +52,23 @@ This structure allows security engineers to analyze **systems from architecture 
 
 Threat models in this repository can be used individually or combined to model **end-to-end system security**.
 
+---
+
+## Threat Model Index
+
+For a quick overview of all threat models, architecture patterns, and case studies in this repository, see:
+
+➡ **THREAT-MODEL-INDEX.md**
+
+This index helps navigate the repository by:
+
+- system type (cloud, AI, A2A)
+- security domain (supply chain, CI/CD, dependencies)
+- architecture patterns
+- real-world case studies
+
+---
+
 
 ### Cloud • AI • A2A • Software Supply Chain • Security Architecture
 
