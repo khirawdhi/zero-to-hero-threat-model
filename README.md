@@ -1,5 +1,58 @@
 # Zero-to-Hero Threat Modeling Playbook
 
+## Threat Modeling Coverage Map
+
+This repository models security risks across the **entire modern application architecture and software delivery lifecycle**.
+
+```text
+                ┌──────────────────────────────┐
+                │   Threat Modeling Methodology │
+                │        (Section 10)           │
+                └──────────────┬───────────────┘
+                               │
+                               ▼
+ ┌─────────────────────────────────────────────────────────┐
+ │                Application Architectures                 │
+ │                                                         │
+ │  Cloud Platforms      AI Systems        A2A Integrations │
+ │  (03 / 04 / 05)       (06)              (07)              │
+ │                                                         │
+ │  - Azure              - RAG pipelines   - B2B APIs       │
+ │  - AWS                - AI agents       - Service APIs   │
+ │  - GCP                - Tool use        - Webhooks       │
+ └───────────────┬─────────────────────────────┬────────────┘
+                 │                             │
+                 ▼                             ▼
+        ┌─────────────────┐           ┌─────────────────┐
+        │ Controls Library │           │ Security Patterns│
+        │     (08)         │           │      (11)        │
+        └─────────┬───────┘           └─────────┬───────┘
+                  │                             │
+                  └─────────────┬───────────────┘
+                                ▼
+                    ┌────────────────────────┐
+                    │ Software Supply Chain  │
+                    │        (09)            │
+                    │                        │
+                    │ CI/CD Pipelines       │
+                    │ Dependencies          │
+                    │ Container Builds      │
+                    │ Artifact Repositories │
+                    │ Deployment Pipelines  │
+                    └────────────┬───────────┘
+                                 │
+                                 ▼
+                        ┌─────────────────┐
+                        │  Case Studies    │
+                        │      (12)        │
+                        └─────────────────┘
+```
+
+This structure allows security engineers to analyze **systems from architecture design through software delivery to real-world incidents**.
+
+Threat models in this repository can be used individually or combined to model **end-to-end system security**.
+
+
 ### Cloud • AI • A2A • Software Supply Chain • Security Architecture
 
 A practical, reusable **threat-modeling playbook** for modern application architectures.
