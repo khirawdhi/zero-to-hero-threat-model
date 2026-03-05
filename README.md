@@ -1,5 +1,11 @@
 # Zero-to-Hero Threat Modeling Playbook
 
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Threat Modeling](https://img.shields.io/badge/focus-threat--modeling-purple)
+![Cloud](https://img.shields.io/badge/cloud-AWS%20%7C%20Azure%20%7C%20GCP-blue)
+![AI Security](https://img.shields.io/badge/AI-LLM%20Security-green)
+![Supply Chain](https://img.shields.io/badge/security-Supply%20Chain-orange)
+
 ## Threat Modeling Coverage Map
 
 This repository models security risks across the **entire modern application architecture and software delivery lifecycle**.
