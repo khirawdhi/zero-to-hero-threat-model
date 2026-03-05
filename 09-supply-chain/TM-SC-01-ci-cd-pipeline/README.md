@@ -1,175 +1,93 @@
-# TM-SC-01 — CI/CD Pipeline Supply Chain Threat Model
+# TM-SC-01 — CI/CD Pipeline Threat Model
 
-## Overview
+This threat model focuses on **security risks within Continuous Integration and Continuous Deployment (CI/CD) pipelines**, which are critical components of modern software delivery systems.
 
-Modern software delivery relies heavily on **CI/CD pipelines** to build, test, and deploy applications. While automation increases development velocity, it also introduces a critical **software supply chain attack surface**.
+CI/CD pipelines automate the process of building, testing, packaging, and deploying software. Because they interact with **source code, build systems, dependency registries, artifact repositories, and production environments**, they represent a high-value target in the **software supply chain**.
 
-If attackers compromise any stage of the CI/CD pipeline, they may inject malicious code, tamper with build artifacts, or deploy compromised images into production environments.
+This model examines risks introduced through:
 
-This threat model analyzes common risks within the CI/CD pipeline and proposes security controls to mitigate them.
+* source code repositories and commit workflows
+* automated build and test pipelines
+* dependency retrieval during builds
+* artifact storage and container registries
+* automated deployment to runtime environments
 
 ---
 
-## Architecture Summary
+## Scope
 
-The modeled CI/CD pipeline includes the following components:
+* Source code commits triggering pipeline execution
+* CI/CD pipeline configuration and execution environments
+* Build systems and dependency resolution during builds
+* Artifact repositories and container registries
+* Automated deployment mechanisms to staging or production environments
+
+---
+
+## Out of scope
+
+* Runtime application vulnerabilities in deployed services
+* Infrastructure threat models for underlying cloud platforms
+* Detailed dependency security risks (covered in **TM-SC-02 — Dependency Management Threat Model**)
+
+---
+
+## Key assets
+
+* source code repositories
+* CI/CD pipeline configurations and workflow definitions
+* build scripts and automation tools
+* dependency manifests and build dependencies
+* build artifacts and container images
+* secrets and credentials used by pipelines
+* deployment configurations and environment variables
+
+---
+
+## Typical CI/CD Pipeline Flow
+
+A simplified CI/CD pipeline architecture typically includes:
 
 ```
 Developer
-   │
-   ▼
+   ↓
 Git Repository
-   │
-   ▼
+   ↓
 CI/CD Pipeline
-   │
-   ▼
+   ↓
 Build System
-   │
-   ▼
+   ↓
 Artifact Repository
-   │
-   ▼
+   ↓
 Container Registry
-   │
-   ▼
+   ↓
 Production Environment
 ```
 
-External dependencies such as **public package registries** may be accessed during the build process.
+External package registries may also be accessed during the build phase for dependency resolution.
 
 ---
 
-## Key Assets
+## Security Objectives
 
-The following assets must be protected:
+The CI/CD pipeline must ensure:
 
-* Source code repositories
-* CI/CD pipeline configurations
-* Build infrastructure
-* Dependency packages
-* Build artifacts
-* Container images
-* Deployment configurations
-* Secrets and access tokens
-
-Compromise of any of these assets could lead to **supply chain attacks affecting downstream environments**.
+* integrity of source code and build artifacts
+* authenticity of dependencies used during builds
+* protection of secrets and credentials within pipelines
+* controlled deployment of trusted artifacts
+* traceability and auditability of pipeline actions
 
 ---
 
-## Trust Boundaries
+## Related Threat Model
 
-The architecture contains several trust boundaries:
+This threat model complements:
 
-**Developer Environment**
+```
+TM-SC-02 — Dependency Management Threat Model
+```
 
-Workstations where developers create and commit code.
+which focuses specifically on risks introduced through **third-party software dependencies and package registries**.
 
-**Internal CI/CD Infrastructure**
-
-Pipeline runners, build systems, and artifact repositories.
-
-**External Dependency Sources**
-
-Public package registries used during builds.
-
-**Production Environment**
-
-Cloud or container environments where the application is deployed.
-
-Crossing these boundaries introduces additional security risks.
-
----
-
-## Key Threat Scenarios
-
-### Credential Theft
-
-Attackers steal developer credentials and push malicious commits to the repository.
-
-### Pipeline Trigger Abuse
-
-Unauthorized triggering of pipelines to execute malicious builds.
-
-### Dependency Confusion
-
-Malicious packages published in public registries override internal dependencies.
-
-### Secrets Exposure
-
-Secrets stored in CI/CD configurations or logs are leaked.
-
-### Artifact Tampering
-
-Attackers modify artifacts stored in artifact repositories.
-
-### Malicious Image Deployment
-
-Compromised container images are deployed to production.
-
----
-
-## Security Controls
-
-The threat model highlights several key security controls.
-
-### Source Code Protection
-
-* Enforce multi-factor authentication for repository access
-* Require signed commits
-* Enable branch protection and pull request reviews
-
-### CI/CD Pipeline Security
-
-* Restrict pipeline triggers
-* Use isolated CI runners
-* Limit permissions of pipeline service accounts
-* Secure secrets using dedicated secret management systems
-
-### Dependency Security
-
-* Implement dependency scanning
-* Generate a Software Bill of Materials (SBOM)
-* Pin dependency versions
-
-### Artifact Integrity
-
-* Sign build artifacts
-* Verify artifact provenance
-* Maintain immutable artifact repositories
-
-### Container Security
-
-* Scan container images for vulnerabilities
-* Verify image signatures before deployment
-* Implement admission policies in the runtime environment
-
----
-
-## Diagram
-
-The diagram below illustrates the CI/CD pipeline architecture, attack vectors, and security controls.
-
-![CI/CD Supply Chain Threat Model](diagrams/supply-chain-ci-cd.png)
-
-Legend:
-
-* **Red arrows** represent potential attack vectors
-* **Green arrows** represent security controls
-* **Dotted boundaries** indicate trust boundaries
-
----
-
-## Related Standards and Guidance
-
-This threat model aligns with guidance from:
-
-* Open Source Security Foundation
-* OWASP Software Supply Chain Security
-* Supply-chain Levels for Software Artifacts
-
----
-
-## Goal
-
-The goal of this threat model is to help security engineers systematically identify and mitigate risks in CI/CD pipelines and protect the integrity of the software supply chain.
+Together, these models address key areas of **software supply chain security** within modern development pipelines.
