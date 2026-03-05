@@ -6,6 +6,8 @@
 ![AI Security](https://img.shields.io/badge/AI-LLM%20Security-green)
 ![Supply Chain](https://img.shields.io/badge/security-Supply%20Chain-orange)
 
+A practical security architecture playbook for threat modeling **cloud, AI, distributed systems, and modern software supply chains**.
+
 ## Table of Contents
 
 - [Threat Modeling Coverage Map](#threat-modeling-coverage-map)
