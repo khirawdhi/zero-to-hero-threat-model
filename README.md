@@ -88,7 +88,8 @@ This index helps navigate the repository by:
 
 ---
 
-### Cloud • AI • A2A • Software Supply Chain • Security Architecture
+## Scope
+Cloud • AI • A2A • Software Supply Chain • Security Architecture
 
 A practical, reusable **threat-modeling playbook** for modern application architectures.
 
