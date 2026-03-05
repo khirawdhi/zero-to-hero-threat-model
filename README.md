@@ -107,6 +107,17 @@ The goal is to provide **real-world, reusable threat-modeling artifacts** that s
 
 ---
 
+## Quick Start
+
+New to this repository? Follow this path:
+
+1. Learn threat modeling basics → `00-getting-started`
+2. Use reusable templates → `01-templates`
+3. Explore common system architectures → `02-reference-architectures`
+4. Study cloud threat models → `03-azure`, `04-aws`, `05-gcp`
+5. Explore modern systems → `06-ai-applications`, `07-a2a`
+6. Learn software supply chain security → `09-supply-chain`
+
 # Who This Repository Is For
 
 This repository is designed for:
