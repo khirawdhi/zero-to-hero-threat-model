@@ -6,6 +6,19 @@
 ![AI Security](https://img.shields.io/badge/AI-LLM%20Security-green)
 ![Supply Chain](https://img.shields.io/badge/security-Supply%20Chain-orange)
 
+## Table of Contents
+
+- [Threat Modeling Coverage Map](#threat-modeling-coverage-map)
+- [Threat Model Index](#threat-model-index)
+- [Who This Repository Is For](#who-this-repository-is-for)
+- [Repository Structure](#repository-structure)
+- [Section Overview](#section-overview)
+- [How to Use This Repository](#how-to-use-this-repository)
+- [Threat Model Folder Standard](#threat-model-folder-standard)
+- [Learning Path (Zero → Hero)](#learning-path-zero--hero)
+- [Disclaimer](#disclaimer)
+- [License](#license)
+
 ## Threat Modeling Coverage Map
 
 This repository models security risks across the **entire modern application architecture and software delivery lifecycle**.
@@ -74,19 +87,6 @@ This index helps navigate the repository by:
 - real-world case studies
 
 ---
-
-## Table of Contents
-
-- [Threat Modeling Coverage Map](#threat-modeling-coverage-map)
-- [Threat Model Index](#threat-model-index)
-- [Who This Repository Is For](#who-this-repository-is-for)
-- [Repository Structure](#repository-structure)
-- [Section Overview](#section-overview)
-- [How to Use This Repository](#how-to-use-this-repository)
-- [Threat Model Folder Standard](#threat-model-folder-standard)
-- [Learning Path (Zero → Hero)](#learning-path-zero--hero)
-- [Disclaimer](#disclaimer)
-- [License](#license)
 
 ### Cloud • AI • A2A • Software Supply Chain • Security Architecture
 
