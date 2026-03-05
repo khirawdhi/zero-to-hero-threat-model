@@ -77,7 +77,7 @@ Threat models in this repository can be used individually or combined to model *
 
 For a quick overview of all threat models, architecture patterns, and case studies in this repository, see:
 
-➡ **THREAT-MODEL-INDEX.md**
+➡ [Threat Model Index](THREAT-MODEL-INDEX.md)
 
 This index helps navigate the repository by:
 
