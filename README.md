@@ -118,6 +118,8 @@ New to this repository? Follow this path:
 5. Explore modern systems → `06-ai-applications`, `07-a2a`
 6. Learn software supply chain security → `09-supply-chain`
 
+---
+
 # Who This Repository Is For
 
 This repository is designed for:
