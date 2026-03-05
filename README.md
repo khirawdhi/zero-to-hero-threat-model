@@ -75,6 +75,18 @@ This index helps navigate the repository by:
 
 ---
 
+## Table of Contents
+
+- [Threat Modeling Coverage Map](#threat-modeling-coverage-map)
+- [Threat Model Index](#threat-model-index)
+- [Who This Repository Is For](#who-this-repository-is-for)
+- [Repository Structure](#repository-structure)
+- [Section Overview](#section-overview)
+- [How to Use This Repository](#how-to-use-this-repository)
+- [Threat Model Folder Standard](#threat-model-folder-standard)
+- [Learning Path (Zero → Hero)](#learning-path-zero--hero)
+- [Disclaimer](#disclaimer)
+- [License](#license)
 
 ### Cloud • AI • A2A • Software Supply Chain • Security Architecture
 
