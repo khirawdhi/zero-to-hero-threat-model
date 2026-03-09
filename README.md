@@ -26,47 +26,47 @@ A practical security architecture playbook for threat modeling **cloud, AI, dist
 This repository models security risks across the **entire modern application architecture and software delivery lifecycle**.
 
 ```text
-                ┌──────────────────────────────┐
+                ┌───────────────────────────────┐
                 │   Threat Modeling Methodology │
                 │        (Section 10)           │
-                └──────────────┬───────────────┘
+                └──────────────┬────────────────┘
                                │
                                ▼
- ┌─────────────────────────────────────────────────────────┐
+ ┌──────────────────────────────────────────────────────────┐
  │                Application Architectures                 │
- │                                                         │
+ │                                                          │
  │  Cloud Platforms      AI Systems        A2A Integrations │
- │  (03 / 04 / 05)       (06)              (07)              │
- │                                                         │
+ │  (03 / 04 / 05)       (06)              (07)             │
+ │                                                          │
  │  - Azure              - RAG pipelines   - B2B APIs       │
  │  - AWS                - AI agents       - Service APIs   │
  │  - GCP                - Tool use        - Webhooks       │
  └───────────────┬─────────────────────────────┬────────────┘
                  │                             │
                  ▼                             ▼
-        ┌─────────────────┐           ┌─────────────────┐
-        │ Controls Library │           │ Security Patterns│
-        │     (08)         │           │      (11)        │
-        └─────────┬───────┘           └─────────┬───────┘
-                  │                             │
-                  └─────────────┬───────────────┘
+        ┌──────────────────┐           ┌───────────────────┐
+        │ Controls Library │           │ Security Patterns │
+        │     (08)         │           │      (11)         │
+        └─────────┬────────┘           └─────────┬─────────┘
+                  │                              │
+                  └─────────────┬────────────────┘
                                 ▼
                     ┌────────────────────────┐
                     │ Software Supply Chain  │
                     │        (09)            │
                     │                        │
-                    │ CI/CD Pipelines       │
-                    │ Dependencies          │
-                    │ Container Builds      │
-                    │ Artifact Repositories │
-                    │ Deployment Pipelines  │
+                    │ CI/CD Pipelines        │
+                    │ Dependencies           │
+                    │ Container Builds       │
+                    │ Artifact Repositories  │
+                    │ Deployment Pipelines   │
                     └────────────┬───────────┘
                                  │
                                  ▼
-                        ┌─────────────────┐
+                        ┌──────────────────┐
                         │  Case Studies    │
                         │      (12)        │
-                        └─────────────────┘
+                        └──────────────────┘
 ```
 
 This structure allows security engineers to analyze **systems from architecture design through software delivery to real-world incidents**.
