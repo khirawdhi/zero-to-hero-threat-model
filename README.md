@@ -22,6 +22,33 @@ A practical security architecture playbook for threat modeling **cloud, AI, dist
 - [Disclaimer](#disclaimer)
 - [License](#license)
 
+
+## Example Output
+
+Each threat model in this playbook produces structured, actionable outputs:
+
+- STRIDE analysis per data flow and trust boundary
+- Risk register with prioritized threats
+- Security controls baseline
+- Test plan to validate controls
+
+### Example
+
+**Flow:** API → Database  
+**Threat:** Tampering  
+**Risk:** Unauthorized data modification  
+
+**Controls:**
+- Input validation
+- Authentication and authorization checks
+- Parameterized queries
+
+**Test:**
+- Attempt injection or unauthorized write
+- Validate access control enforcement
+
+This approach ensures threat modeling results are not just theoretical, but directly actionable.
+
 ## Threat Modeling Coverage Map
 
 This repository models security risks across the **entire modern application architecture and software delivery lifecycle**.
