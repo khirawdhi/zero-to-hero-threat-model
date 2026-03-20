@@ -131,7 +131,7 @@ This repository provides structured examples, templates, and architecture patter
 
 The goal is to provide **real-world, reusable threat-modeling artifacts** that security engineers and architects can apply directly in modern distributed systems.
 
----
+
 
 ## Quick Start
 
@@ -144,7 +144,7 @@ New to this repository? Follow this path:
 5. Explore modern systems → `06-ai-applications`, `07-a2a`
 6. Learn software supply chain security → `09-supply-chain`
 
----
+
 
 # Who This Repository Is For
 
@@ -155,7 +155,7 @@ This repository is designed for:
 * **Developers designing distributed systems**
 * **Anyone learning threat modeling using real architecture examples**
 
----
+
 
 # Repository Structure
 
@@ -175,7 +175,7 @@ This repository is designed for:
 12-security-case-studies
 ```
 
----
+
 
 # How to Use This Repository
 
@@ -188,7 +188,7 @@ Start with:
 3. Review `01-templates`
 4. Explore threat models across cloud, AI, A2A, and supply chain sections
 
----
+
 
 ## If You're Using This in Your Organization
 
@@ -203,7 +203,7 @@ Start with:
 5. reference mitigations from **08-controls-library**
 6. track risks in the **risk register**
 
----
+
 
 # Disclaimer
 
@@ -212,7 +212,7 @@ This repository is intended for **education and practical reuse**.
 Threat modeling results depend heavily on system architecture, operational environment, and organizational controls.
 Always validate controls with your **engineering, platform, and compliance teams**.
 
----
+
 
 # License
 
