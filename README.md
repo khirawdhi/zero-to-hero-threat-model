@@ -5,6 +5,7 @@
 ![Cloud](https://img.shields.io/badge/cloud-AWS%20%7C%20Azure%20%7C%20GCP-blue)
 ![AI Security](https://img.shields.io/badge/AI-LLM%20Security-green)
 ![Supply Chain](https://img.shields.io/badge/security-Supply%20Chain-orange)
+![Version](https://img.shields.io/badge/version-v1.0.0-blue)
 
 A practical security architecture playbook for threat modeling **cloud, AI, distributed systems, and modern software supply chains**.
 
