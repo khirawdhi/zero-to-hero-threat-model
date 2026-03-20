@@ -9,6 +9,35 @@
 
 A practical security architecture playbook for threat modeling **cloud, AI, distributed systems, and modern software supply chains**.
 
+--
+
+## Philosophy
+
+This playbook treats threat modeling as an architectural discipline, not a checklist.
+
+### Core Principles
+
+- **Patterns before platforms**  
+  Focus on system design patterns first, then map to cloud providers.
+
+- **Trust boundaries define risk**  
+  Security failures occur where trust changes.
+
+- **Threat modeling is continuous**  
+  Not a one-time exercise, but part of system design and evolution.
+
+- **STRIDE is applied per data flow**  
+  Not per component, but where data crosses boundaries.
+
+- **Controls must be testable**  
+  If a control cannot be validated, it is not effective.
+
+- **Assumptions must be explicit**  
+  Hidden assumptions lead to incorrect threat models.
+
+This approach enables consistent, scalable threat modeling across cloud, AI, and distributed systems.
+
+
 ## Table of Contents
 
 - [Threat Modeling Coverage Map](#threat-modeling-coverage-map)
