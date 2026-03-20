@@ -101,7 +101,6 @@ This structure allows security engineers to analyze **systems from architecture 
 
 Threat models in this repository can be used individually or combined to model **end-to-end system security**.
 
----
 
 ## Threat Model Index
 
@@ -116,7 +115,6 @@ This index helps navigate the repository by:
 - architecture patterns
 - real-world case studies
 
----
 
 ## Scope
 Cloud • AI • A2A • Software Supply Chain • Security Architecture
