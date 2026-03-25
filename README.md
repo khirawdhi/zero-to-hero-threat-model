@@ -12,8 +12,7 @@
 
 Most modern systems are **insecure by design**.
 
-Not because engineers ignore security —
-but because **threat modeling is treated as a checklist instead of an architectural discipline**.
+Not because engineers ignore security but because **threat modeling is treated as a checklist instead of an architectural discipline**.
 
 Security failures don’t happen inside components.
 
@@ -257,7 +256,7 @@ The goal is not to apply controls. The goal is to **choose the right model**
 ## Final Thought
 
 > **If your architecture is insecure,
-> your threat model will only document failure — not prevent it.**
+> your threat model will only document failure not prevent it.**
 
 ---
 
