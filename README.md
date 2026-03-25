@@ -83,7 +83,7 @@ If you only explore 3 things in this repository:
 * Data exfiltration
 * LLM trust boundaries
 
-> `[/06-ai-applications](https://github.com/khirawdhi/zero-to-hero-threat-model/tree/085fa38359f9846ecbaf44cefa207b23a278aa69/06-ai-applications)`
+> `[/06-ai-applications]`
 
 ---
 
