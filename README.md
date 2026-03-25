@@ -227,8 +227,8 @@ The goal is not to apply controls. The goal is to **choose the right model**
 
 ### Security Engineers / Architects
 
-* Use patterns from (./11-security-architecture-patterns)
-* Reuse controls from (./08-controls-library)
+* Apply reusable patterns from [Security Architecture Patterns](./11-security-architecture-patterns)  
+* Map mitigations using the [Controls Library](./08-controls-library)  
 * Align threat models with real system designs
 
 ---
