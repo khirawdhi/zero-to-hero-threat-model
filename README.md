@@ -1,7 +1,7 @@
 # Zero-to-Hero Threat Modeling Playbook
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![Threat Modeling](https://img.shields.io/badge/focus-threat--modeling-purple)
+![Focus](https://img.shields.io/badge/focus-security--architecture-purple)
 ![Cloud](https://img.shields.io/badge/cloud-AWS%20%7C%20Azure%20%7C%20GCP-blue)
 ![AI Security](https://img.shields.io/badge/AI-LLM%20Security-green)
 ![Supply Chain](https://img.shields.io/badge/security-Supply%20Chain-orange)
@@ -19,22 +19,63 @@ Security failures don’t happen inside components.
 
 > **They happen at trust boundaries.**
 
-This repository fixes that.
+This repository exists to fix that.
 
 ---
 
 ## What This Is
 
-A **pattern-first, architecture-driven threat modeling playbook** for modern systems:
+A **pattern-first, architecture-driven threat modeling playbook** for:
 
-* Cloud-native architectures (microservices, APIs, data pipelines)
+* Cloud-native systems (microservices, APIs, data pipelines)
 * AI systems (RAG, agents, tool-integrated LLMs)
-* Service-to-service (A2A) systems (APIs, webhooks, B2B integrations)
-* Software supply chain (CI/CD, dependencies, container builds, artifacts)
+* Service-to-service systems (A2A, APIs, webhooks)
+* Software supply chains (CI/CD, dependencies, artifacts)
 
-This is not theory.
+This is not theoretical guidance.
 
 This is how **real systems should be designed securely**.
+
+---
+
+## Flagship Threat Models (Start Here)
+
+If you are evaluating this repository, **start here**.
+
+These represent **real-world, system-level security design**.
+
+---
+
+### AI Security — RAG + Agents
+
+[Explore AI Threat Models](./06-ai-applications)
+
+* Prompt injection attack paths
+* Tool execution trust boundaries
+* Data exfiltration via LLM context
+* LLM treated as **untrusted component**
+
+---
+
+### A2A Security — Trust Models (mTLS vs OAuth)
+
+[Explore A2A Threat Models](./07-a2a)
+
+* Service identity and authentication design
+* mTLS vs OAuth tradeoffs (when and why)
+* Token vs certificate-based trust
+* Secure service-to-service communication patterns
+
+---
+
+### Supply Chain Security — CI/CD + Dependencies
+
+[Explore Supply Chain Threat Models](./09-supply-chain)
+
+* Dependency trust and poisoning risks
+* Artifact integrity and provenance
+* CI/CD pipeline attack surface
+* Build → deploy → runtime trust boundaries
 
 ---
 
@@ -42,7 +83,7 @@ This is how **real systems should be designed securely**.
 
 * Not a checklist
 * Not OWASP copy-paste
-* Not tool-specific guidance
+* Not tool-specific security
 * Not “run STRIDE and move on”
 
 If your architecture is wrong,
@@ -53,59 +94,22 @@ If your architecture is wrong,
 ## Core Philosophy
 
 * **Patterns before platforms**
-  AWS/Azure/GCP are implementation details. Security is architectural.
+  Security is architectural — cloud providers are implementation details
 
 * **Trust boundaries define risk**
-  Every boundary = a potential failure point.
+  Every boundary is a potential failure point
 
 * **Threat modeling is continuous**
-  Done during design — not after incidents.
+  Done during design, not after incidents
 
 * **STRIDE is applied per data flow**
-  Not per component. Context matters.
+  Context matters more than components
 
 * **Controls must be testable**
-  If you can’t validate it, it’s not a control.
+  If you can’t validate it, it’s not real
 
 * **Assumptions must be explicit**
-  Hidden assumptions = broken threat models.
-
----
-
-## Flagship Threat Models (Start Here)
-
-If you only explore 3 things in this repository:
-
-### 1. AI Systems (RAG + Agents)
-
-* Prompt injection
-* Tool abuse
-* Data exfiltration
-* LLM trust boundaries
-
--> `/06-ai-applications`
-
----
-
-### 2. A2A Trust Models (mTLS vs OAuth)
-
-* Service identity
-* Trust establishment
-* Token vs certificate-based auth
-* Real-world tradeoffs
-
--> `/07-a2a`
-
----
-
-### 3. Software Supply Chain (CI/CD)
-
-* Dependency trust
-* Artifact integrity
-* Build pipeline threats
-* Deployment risks
-
--> `/09-supply-chain`
+  Hidden assumptions break systems
 
 ---
 
@@ -117,18 +121,16 @@ Each threat model includes:
 * STRIDE analysis per data flow
 * Risk register (prioritized)
 * Security controls
-* Test plans (validation, not theory)
+* Test plans (validation-focused)
 
 ---
 
 ## Architecture → Threat Modeling Approach
 
-This repository is built on a simple idea:
-
-> **You don’t threat model diagrams.
+> **You don’t threat model components.
 > You threat model trust transitions.**
 
-Every system here is analyzed as:
+Each system is analyzed as:
 
 1. Architecture
 2. Data flows
@@ -139,19 +141,18 @@ Every system here is analyzed as:
 
 ---
 
-## Security Architecture Decisions (Critical Thinking)
+## Security Architecture Decisions (Real-World Thinking)
 
-Real systems are about **tradeoffs**, not checklists.
+Security is about **tradeoffs**, not tools.
 
-This repo explores decisions like:
+This repository explores:
 
-* mTLS vs OAuth for service-to-service communication
+* mTLS vs OAuth for service-to-service trust
 * API Gateway vs direct service exposure
 * LLM as trusted vs untrusted component
 * Build-time vs runtime supply chain controls
 
-Security is not about tools
-It’s about **choosing the right model**
+The goal is not to apply controls. The goal is to **choose the right model**
 
 ---
 
@@ -214,33 +215,21 @@ It’s about **choosing the right model**
 
 ## How to Use This (Practically)
 
-### If You’re Designing a System
+### Designing a System
 
 * Start with a similar architecture
 * Copy the threat model structure
-* Replace:
-
-  * architecture diagram
-  * trust boundaries
-  * assumptions
+* Replace diagrams, trust boundaries, assumptions
 * Run STRIDE per data flow
 * Apply controls + validate via test plan
 
 ---
 
-### If You’re an Architect / Security Engineer
+### Security Engineers / Architects
 
 * Use patterns from `/11-security-architecture-patterns`
 * Reuse controls from `/08-controls-library`
-* Align threat models to real system designs
-
----
-
-### If You’re Learning
-
-* Start with `/00-getting-started`
-* Move to `/01-templates`
-* Then explore real systems (AI, A2A, supply chain)
+* Align threat models with real system designs
 
 ---
 
@@ -249,7 +238,7 @@ It’s about **choosing the right model**
 * Product Security Engineers
 * Security Architects
 * Platform / Cloud Engineers
-* Developers designing distributed systems
+* Developers building distributed systems
 
 ---
 
