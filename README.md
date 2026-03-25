@@ -40,37 +40,49 @@ This is how **real systems should be designed securely**.
 
 ## Flagship Threat Models (Start Here)
 
-If you are evaluating this repository, **start here**.
+If you are evaluating this repository, start here.
 
-These represent **real-world, system-level security design**.
+These represent **real-world, system-level security design across AI, service-to-service trust, and software supply chain**.
 
 ---
 
-### AI Security — RAG + Agents
+### AI Security — RAG + Agent Systems
 
-[Explore AI Threat Models](./06-ai-applications)
+[RAG Application Threat Model](./06-ai-applications/TM-AI-01-rag-application)
+[AI Agent with Tools Threat Model](./06-ai-applications/TM-AI-02-agent-with-tools)
+
+**What this covers:**
 
 * Prompt injection attack paths
-* Tool execution trust boundaries
 * Data exfiltration via LLM context
-* LLM treated as **untrusted component**
+* Tool execution risks (agents calling external systems)
+* LLM treated as an **untrusted component**
 
 ---
 
-### A2A Security — Trust Models (mTLS vs OAuth)
+### A2A Security — Service-to-Service Trust Models
 
-[Explore A2A Threat Models](./07-a2a)
+[OAuth Client Credentials Threat Model](./07-a2a/TM-A2A-01-oauth-client-credentials)
+[mTLS Service Mesh Threat Model](./07-a2a/TM-A2A-03-mtls-service-mesh)
+
+**What this covers:**
 
 * Service identity and authentication design
-* mTLS vs OAuth tradeoffs (when and why)
-* Token vs certificate-based trust
-* Secure service-to-service communication patterns
+* mTLS vs OAuth tradeoffs (real architectural decision)
+* Token-based vs certificate-based trust
+* Secure communication across distributed systems
 
 ---
 
-### Supply Chain Security — CI/CD + Dependencies
+### Supply Chain Security — CI/CD + Artifact Trust
 
-[Explore Supply Chain Threat Models](./09-supply-chain)
+[CI/CD Pipeline Threat Model](./09-supply-chain/TM-SC-01-ci-cd-pipeline)
+[Dependency Management Threat Model](./09-supply-chain/TM-SC-02-dependency-management)
+[Container Build Pipeline Threat Model](./09-supply-chain/TM-SC-03-container-build-pipeline)
+[Artifact Repository Threat Model](./09-supply-chain/TM-SC-04-artifact-repository)
+[Deployment Pipeline Threat Model](./09-supply-chain/TM-SC-05-deployment-pipeline)
+
+**What this covers:**
 
 * Dependency trust and poisoning risks
 * Artifact integrity and provenance
