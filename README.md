@@ -83,7 +83,7 @@ If you only explore 3 things in this repository:
 * Data exfiltration
 * LLM trust boundaries
 
-> `/06-ai-applications`
+> `[/06-ai-applications](https://github.com/khirawdhi/zero-to-hero-threat-model/tree/085fa38359f9846ecbaf44cefa207b23a278aa69/06-ai-applications)`
 
 ---
 
@@ -94,7 +94,7 @@ If you only explore 3 things in this repository:
 * Token vs certificate-based auth
 * Real-world tradeoffs
 
-> `/07-a2a`
+> `[/07-a2a](https://github.com/khirawdhi/zero-to-hero-threat-model/tree/085fa38359f9846ecbaf44cefa207b23a278aa69/07-a2a)`
 
 ---
 
@@ -105,7 +105,7 @@ If you only explore 3 things in this repository:
 * Build pipeline threats
 * Deployment risks
 
-> `/09-supply-chain`
+> `[/09-supply-chain](https://github.com/khirawdhi/zero-to-hero-threat-model/tree/085fa38359f9846ecbaf44cefa207b23a278aa69/09-supply-chain)`
 
 ---
 
@@ -230,16 +230,16 @@ This repo explores decisions like:
 
 ### If You’re an Architect / Security Engineer
 
-* Use patterns from `/11-security-architecture-patterns`
-* Reuse controls from `/08-controls-library`
+* Use patterns from `[/11-security-architecture-patterns](https://github.com/khirawdhi/zero-to-hero-threat-model/tree/085fa38359f9846ecbaf44cefa207b23a278aa69/11-security-architecture-patterns)`
+* Reuse controls from `[/08-controls-library](https://github.com/khirawdhi/zero-to-hero-threat-model/tree/085fa38359f9846ecbaf44cefa207b23a278aa69/08-controls-library)`
 * Align threat models to real system designs
 
 ---
 
 ### If You’re Learning
 
-* Start with `/00-getting-started`
-* Move to `/01-templates`
+* Start with `[/00-getting-started](https://github.com/khirawdhi/zero-to-hero-threat-model/tree/085fa38359f9846ecbaf44cefa207b23a278aa69/00-getting-started)`
+* Move to `[/01-templates](https://github.com/khirawdhi/zero-to-hero-threat-model/tree/085fa38359f9846ecbaf44cefa207b23a278aa69/01-templates)`
 * Then explore real systems (AI, A2A, supply chain)
 
 ---
